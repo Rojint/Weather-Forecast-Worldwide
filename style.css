@@ -182,7 +182,7 @@ body {
     color: #313030;
 }
 
-.forecast {
+#row {
     margin-top: 60px !important;
     height: 25vh;
     position: relative;
@@ -193,7 +193,7 @@ body {
     justify-items: center;
 }
 
-.forecast .col-md-2 {
+.col-md-2 {
     width: 12vh;
     height: 20vh;
     border: 2px solid #0e0d0d;
@@ -209,13 +209,13 @@ body {
     transition: 0.2s ease-in-out;
 }
 
-.forecast .col-md-2:hover {
+.col-md-2:hover {
     transform: scale(1.1);
 }
 
-.forecast img {
-    width: 80px;
-    height: 80px;
+.weather-icon {
+    width: 70px;
+    height: 70px;
     justify-content: center;
 }
 

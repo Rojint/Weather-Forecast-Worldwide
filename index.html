@@ -26,20 +26,25 @@
     <!-- fontawesome cdn -->
     <script src="https://kit.fontawesome.com/5f0d94f57e.js" crossorigin="anonymous"></script>
 
+    <!-- axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>Weather</title>
 </head>
 
 <body>
-    <div class="img-container">
+    <div class="img-container" id="img-container">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 search-container">
-                    <input type="text" class="form-control search-box" placeholder=" Enter your city"
-                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary search-btn" type="button" id="button-addon2"><i
-                            class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                    <form id="search-form">
+                        <input type="text" id="search-box" class="form-control search-box" placeholder="Enter your city"
+                            value="Mahabad" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary search-btn" type="submit" id="button-addon2"><i
+                                class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
                 </div>
                 <div class="col-md-4 date-container">
                     <p id="date"></p>
@@ -52,7 +57,7 @@
                 </i>
             </div>
             <div class="container-temp">
-                <img class="weather-icon" src="img/few-clouds-day.png" alt="">
+                <img class="weather-icon" id="icon" src="img/few-clouds-day.png" alt="">
                 <div class="temp-description">
                     <h1 id="temp">22°C</h1>
                     <h3 id="description">Sunny</h3>
@@ -62,66 +67,22 @@
                 <div class="row data">
                     <div class="col-md-4 description-data">
                         <i class="bi bi-wind"></i>
-                        <p class="mb-0 fs-6 fw-bold">8 km/h</p>
+                        <p class="mb-0 fs-6 fw-bold" id="wind">8 km/h</p>
                         <p class="fs-6 fw-bold">wind</p>
                     </div>
                     <div class=" col-md-4 description-data">
                         <i class="bi bi-moisture"></i>
-                        <p class="mb-0 fs-6 fw-bold">24%</p>
-                        <p class="fs-6 fw-bold">humidty</p>
+                        <p class="mb-0 fs-6 fw-bold" id="humidity">24%</p>
+                        <p class="fs-6 fw-bold">humidity</p>
                     </div>
                     <div class="col-md-4 description-data">
                         <i class="bi bi-thermometer "></i>
-                        <p class="mb-0 fs-6 fw-bold">24°</p>
-                        <p class="fs-6 fw-bold">feellike</p>
+                        <p class="mb-0 fs-6 fw-bold" id="feels-like">24°</p>
+                        <p class="fs-6 fw-bold">feels_like</p>
                     </div>
                 </div>
             </div>
-            <div class="row forecast">
-                <div class="col-md-2">
-                    <p class="mb-0 mt-4">Day</p>
-                    <img class="weather-icon" src="img/few-clouds-day.png" alt="">
-                    <p class="max-min" data-bs-toggle="tooltip" data-bs-title="Maximum Temperature">20°</p>
-                    <p class="max-min min" data-bs-toggle="tooltip" data-bs-title="Minimum Temperature">20°</p>
-                </div>
-                <div class="col-md-2">
-                    <p class="mb-0 mt-4">Day</p>
-                    <img class="weather-icon mb-0" src="img/few-clouds-day.png" alt="">
-                    <p class="max-min">20°</p>
-                    <p class="max-min min">20°</p>
-                </div>
-                <div class="col-md-2 ">
-                    <p class="mb-0 mt-4">Day</p>
-                    <img class="weather-icon" src="img/few-clouds-day.png" alt="">
-                    <p class="max-min">20°</p>
-                    <p class="max-min min">20°</p>
-                </div>
-                <div class="col-md-2">
-                    <p class="mb-0 mt-4">Day</p>
-                    <img class="weather-icon" src="img/few-clouds-day.png" alt="">
-                    <p class="max-min">20°</p>
-                    <p class="max-min min">20°</p>
-                </div>
-                <div class="col-md-2">
-                    <p class="mb-0 mt-4">Day</p>
-                    <img class="weather-icon" src="img/few-clouds-day.png" alt="">
-                    <p class="max-min">20°</p>
-                    <p class="max-min min">20°</p>
-                </div>
-                <div class="col-md-2">
-                    <p class="mb-0 mt-4">
-                        Day
-                    </p>
-                    <img class="weather-icon" src="img/few-clouds-day.png" alt="">
-                    <p class="max-min " data-bs-toggle="tooltip" data-bs-title="Maximum Temperature">
-                        20°
-                    </p>
-                    <p class="max-min min" data-bs-toggle="tooltip" data-bs-title="Minimum Temperature"
-                        data-bs-custom-class="custom-tooltip">
-                        20°
-                    </p>
-                </div>
-            </div>
+            <div id="forecast"></div>
         </div>
         <footer>
             <a href="#">Open-source code, by Rozhin Tarigh</a>
