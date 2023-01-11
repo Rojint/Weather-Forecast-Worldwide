@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.img-container {
+    background-image: url(img/sky3.jpg);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    align-content: center;
+    margin-top: 60px;
+    height: 80vh;
+    width: 100vh;
+    z-index: 10;
+    border: 2px solid #a7a0a0;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.date-container {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    color: #ECECEC;
+}
+
+
+.search-container {
+    text-align: center;
+    margin-top: 33px;
+}
+
+.search-box {
+    font-size: 15px;
+    color: #ECECEC;
+    font-weight: 800;
+    width: 60%;
+    display: inline;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ECECEC;
+    border-radius: 0;
+
+}
+
+.search-box:hover {
+    background: none;
+    border-bottom: 2px solid #ECECEC;
+}
+
+.search-box:focus {
+    background: none;
+    border-bottom: 2px solid #ECECEC;
+    outline: 0;
+    box-shadow: none;
+    color: #ECECEC;
+}
+
+.search-box::placeholder {
+    color: #ECECEC;
+}
+
+.search-btn {
+    display: inline;
+    background-color: #B5A396;
+    color: #ECECEC;
+}
+
+.search-btn:hover {
+    background-color: #888586;
+}
+
+.fa-magnifying-glass {
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.city-name-container {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9vh;
+    margin-bottom: 0px;
+}
+
+.container-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    position: relative;
+    padding-top: 0px;
+}
+
+.weather-icon {
+    position: relative;
+    display: inline;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.bi-geo-alt {
+    display: inline;
+    font-size: 30px;
+    padding-left: 20px;
+    color: #ECECEC;
+}
+
+
+#city-name {
+    display: inline;
+    font-weight: 600;
+    color: #ECECEC;
+}
+
+#temp {
+    font-weight: 1000;
+    font-size: 65px;
+    color: #ECECEC;
+    text-shadow: 3px 3px 20px #dbd6d9,
+        -2px 1px 30px #dbd6d9;
+    padding-left: 20px;
+    margin-bottom: 0
+}
+
+#description {
+    font-size: 25px;
+    font-weight: 1000;
+    align-items: right;
+    padding-left: 20px;
+    color: #313030;
+
+}
+
+.line {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: darkcyan;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    border-top: 2px solid #494949;
+
+
+}
+
+.data {
+    margin-top: 5px;
+    border-top: 1px solid #ECECEC;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+.description-data {
+    height: 5vh;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    color: #313030;
+}
+
+.forecast {
+    margin-top: 60px !important;
+    height: 25vh;
+    position: relative;
+    margin: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.forecast .col-md-2 {
+    width: 12vh;
+    height: 20vh;
+    border: 2px solid #0e0d0d;
+    border-radius: 40px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 900;
+    background: transparent;
+    color: #ECECEC;
+    background-color: #363535;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.4;
+    transition: 0.2s ease-in-out;
+}
+
+.forecast .col-md-2:hover {
+    transform: scale(1.1);
+}
+
+.forecast img {
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+}
+
+.max-min {
+    display: inline;
+    margin: 5px;
+}
+
+.min {
+    color: #000000;
+
+}
+
+footer {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+footer a {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #313030;
+}
