@@ -113,7 +113,7 @@ function showTemp(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   windElement.innerHTML = `${response.data.wind.speed}Km/h`;
-  humidityElement.innerHTML = response.data.temperature.humidity;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   feelLikeElement.innerHTML = `${Math.round(
     response.data.temperature.feels_like
   )}°`;
@@ -127,15 +127,14 @@ function search(event) {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then((response) => showTemp(response));
     cityElement.innerHTML = city.toUpperCase();
-  } else {
-    locationTitle.innerHTML = null;
-    alert(`Please type a location`);
   }
 }
 
 let searchBox = document.querySelector("#search-form");
 searchBox.addEventListener("submit", search);
 
-window.document.onload = function (e) {
-  search("Mahabad");
+window.onload = function (e) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Mahabad&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then((response) => showTemp(response));
+  cityElement.innerHTML = "Mahabad";
 };
